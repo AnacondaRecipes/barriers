@@ -1,0 +1,49 @@
+{% set name = "barriers" %}
+{% set version = "1.1.0" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: file:///Users/jolivieri/repos/aggregate/barriers-feedstock/barriers-1.1.0.tar.gz
+  sha256: dee86a3b523277321095405707cee00ce6b9fd40a423c98588e663ba498ed4fc
+
+build:
+  noarch: python
+  script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
+  number: 0
+
+requirements:
+  host:
+    - python
+    - setuptools 67.8.0  # because upstream requires
+    - pip
+  run:
+    - python
+
+test:
+  imports:
+    - barriers
+  commands:
+    - pip check
+  requires:
+    - pip
+
+about:
+  home: https://github.com/reity/barriers
+  license: MIT
+  license_file: LICENSE
+  license_family: MIT
+  summary: |
+    Python decorators for including/excluding type checks, value/bounds checks, and other code blocks within the
+    compiled bytecode of functions and methods.
+  description: |
+    Python decorators for including/excluding type checks, value/bounds checks, and other code blocks within the
+    compiled bytecode of functions and methods.
+  doc_url: https://github.com/reity/barriers
+  dev_url: https://github.com/reity/barriers
+
+extra:
+  recipe-maintainers:
+    - boldorider4
