@@ -10,15 +10,15 @@ source:
   sha256: dee86a3b523277321095405707cee00ce6b9fd40a423c98588e663ba498ed4fc
 
 build:
-  noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
   number: 0
 
 requirements:
   host:
     - python
-    - setuptools 67.8.0  # because upstream requires
+    - setuptools 67.8.0  # because upstream requires ~=67
     - pip
+    - wheel
   run:
     - python
 
