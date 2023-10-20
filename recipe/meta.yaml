@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: file:///Users/jolivieri/repos/aggregate/barriers-feedstock/barriers-1.1.0.tar.gz
+  url: https://pypi.io/packages/source/b/barriers/barriers-1.1.0.tar.gz
   sha256: dee86a3b523277321095405707cee00ce6b9fd40a423c98588e663ba498ed4fc
 
 build:
