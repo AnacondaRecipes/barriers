@@ -16,7 +16,7 @@ build:
 requirements:
   host:
     - python
-    - setuptools 67.8.0  # because upstream requires ~=67
+    - setuptools
     - pip
     - wheel
   run:
