@@ -41,7 +41,7 @@ about:
   description: |
     Python decorators for including/excluding type checks, value/bounds checks, and other code blocks within the
     compiled bytecode of functions and methods.
-  doc_url: https://barriers.readthedocs.io/en/1.1.0
+  doc_url: https://barriers.readthedocs.io
   dev_url: https://github.com/reity/barriers
 
 extra:
